@@ -4,6 +4,7 @@ for(let i = 0; i < 16; i++){
 	code += (Math.floor(Math.random()*10)).toString();
 }
     // feature detect
+var eogtoggle = false;
 var x, y, z;
 document.getElementById("mainDiv").onclick = ()=> {
 	
@@ -48,7 +49,7 @@ document.getElementById("note").onclick = ()=>{
 document.getElementById("escape").onclick = ()=>{
 		if(document.querySelector("input").value === code){
 			alert("Great Job!");
-			window.open("", "_self").close();
+			eogtoggle = true;
 		}
 		else{
 			alert("Nice try. Better luck next time...");
